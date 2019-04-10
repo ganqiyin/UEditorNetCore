@@ -8,16 +8,28 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace UEditorNetCore
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class UEditorService
     {
         private UEditorActionCollection actionList;
 
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <param name="env"></param>
+        /// <param name="actions"></param>
         public UEditorService(IHostingEnvironment env, UEditorActionCollection actions)
         {
             Config.WebRootPath = env.WebRootPath;
             actionList = actions;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="context"></param>
         public void DoAction(HttpContext context)
         {
             var action = context.Request.Query["action"];

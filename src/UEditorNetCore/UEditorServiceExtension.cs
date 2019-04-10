@@ -7,8 +7,18 @@ using System.Threading.Tasks;
 
 namespace UEditorNetCore
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class UEditorServiceExtension
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configFile"></param>
+        /// <param name="isCache"></param>
+        /// <returns></returns>
         public static UEditorActionCollection AddUEditorService(
             this IServiceCollection services, 
             string configFile="config.json", 
